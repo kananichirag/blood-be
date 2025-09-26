@@ -4,10 +4,11 @@ const dontenv = require('dotenv');
 const Routes = require('./routes/authRoutes');
 const mongoose = require('mongoose');
 dontenv.config();
+const cors = require('cors');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 app.use('/', Routes);
 
 app.listen(process.env.PORT || 3000, () => console.log('Server is running...'));
