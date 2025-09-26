@@ -8,5 +8,6 @@ AuthRoutes.post('/login', AuthController.Login);
 AuthRoutes.get('/users', AuthController.getAllUsers);
 AuthRoutes.get('/users/:id', AuthController.GetUser);
 AuthRoutes.put('/users/:id', AuthController.UpdateUser);
+AuthRoutes.delete('/users/:id', AuthController.DeleteUser);
 
 module.exports = AuthRoutes;
